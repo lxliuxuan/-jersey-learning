@@ -1,5 +1,4 @@
 package cn.lx.entity;
-
 /**
  * Created by lxliuxuan on 2016/11/14.
  */
