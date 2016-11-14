@@ -5,3 +5,6 @@
 /chapter1-2/target
 /chapter1-3/.idea
 /chapter1-3/target
+
+*.iml
+.idea
