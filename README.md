@@ -7,13 +7,25 @@
 ##**项目目录**
 ----------
 ###入门案例
+
  - [chapter1-1:基本入门项目，整体项目框架，快速构建RESTful API][1]
- - [chapter1-2:通过配置程序入口启动项目][1]
- - [chapter1-3:不适用Tomcat。通过本地编写Main方法启动项目][1]
+
+ - [chapter1-2:通过配置程序入口启动项目][2]
+
+ - [chapter1-3:不适用Tomcat。通过本地编写Main方法启动项目][3]
+
  
+
 ------------
+
 ###详细案例
-[chapter2-1-1 复杂案例实现增删改查][2]
+
+[chapter2-1-1 复杂案例实现增删改查][4]
+[chapter2-2 Jersey常用注解][5]
+
 
   [1]: http://blog.csdn.net/qq_28334711/article/details/53129919
-  [2]: http://blog.csdn.net/qq_28334711/article/details/53159203
+  [2]: http://blog.csdn.net/qq_28334711/article/details/53129919
+  [3]: http://blog.csdn.net/qq_28334711/article/details/53129919
+  [4]: http://blog.csdn.net/qq_28334711/article/details/53159203
+  [5]: http://blog.csdn.net/qq_28334711/article/details/53171975
