@@ -24,6 +24,10 @@
  - [chapter2-2 Jersey常用注解][5]
  - [chapter2-3 Jersey Response响应请求][6]
 
+ ### 页面操作
+ 我们在实际开发中主要使用Jersey提供RESTful服务，很少使用页面跳转以及文件上传与下载等功能，但不表示Jersey不支持这些功能。
+ - [chapter3-1 文件上传与下载][]
+ - [chapter3-2 页面重定向与转发][]
 
   [1]: http://blog.csdn.net/qq_28334711/article/details/53129919
   [2]: http://blog.csdn.net/qq_28334711/article/details/53129919
