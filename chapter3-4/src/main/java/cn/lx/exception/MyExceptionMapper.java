@@ -11,11 +11,10 @@ import javax.ws.rs.ext.Provider;
 @Provider//该注解的作用是用于表明该类是javax.ws.rs的一种组件
 public class MyExceptionMapper implements ExceptionMapper<Exception>{
     public Response toResponse(Exception e) {
-        System.out.println(21);
+        //判断异常的种类
         if(e instanceof MyException){
             e.printStackTrace();
         }
-
         return Response.status(Response.Status.BAD_REQUEST).entity(e.toString()).build();
     }
 }

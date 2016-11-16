@@ -20,5 +20,8 @@ public class Application extends ResourceConfig{
         // 当一个异常有多种处理方式的时候，按照异常处理类的顺序，先注册的捕获处理该异常，
         register(MyExceptionHandler.class);
         register(MyExceptionMapper.class);
+        /*声明异常包所在的位置
+        * */
+        packages("cn.lx.exception");
     }
 }

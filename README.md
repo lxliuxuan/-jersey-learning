@@ -28,8 +28,9 @@
 
  - [chapter3-1 文件上传与下载][7]
  - [chapter3-2 页面重定向与转发][7]
- - [chapter3-3 统一异常处理][7]
- - [chapter3-4 过滤器使用][7]
+ - [chapter3-3 过滤器使用][7]
+ - [chapter3-4 统一异常处理][7]
+ 
  
 ###数据访问
 
@@ -51,3 +52,4 @@
   [4]: http://blog.csdn.net/qq_28334711/article/details/53159203
   [5]: http://blog.csdn.net/qq_28334711/article/details/53171975
   [6]: http://blog.csdn.net/qq_28334711/article/details/53183258
+  [7]: http://blog.csdn.net/qq_28334711/article/details/53186674
