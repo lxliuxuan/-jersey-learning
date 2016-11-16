@@ -22,6 +22,7 @@
 
 [chapter2-1-1 复杂案例实现增删改查][4]
 [chapter2-2 Jersey常用注解][5]
+[chapter2-3 Jersey Response响应请求][6]
 
 
   [1]: http://blog.csdn.net/qq_28334711/article/details/53129919
@@ -29,3 +30,4 @@
   [3]: http://blog.csdn.net/qq_28334711/article/details/53129919
   [4]: http://blog.csdn.net/qq_28334711/article/details/53159203
   [5]: http://blog.csdn.net/qq_28334711/article/details/53171975
+  [6]: http://blog.csdn.net/qq_28334711/article/details/53183258

@@ -1,17 +1,22 @@
 package cn.lx.resource;
 
 import cn.lx.entity.Student;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import java.net.URI;
 import java.util.*;
 
 /**提供学生增删改查的接口服务
  * Created by lxliuxuan on 2016/11/14.
  */
 @Path("/student")
+@Produces
 public class StudentResource {
     private static Map<String,Student> map = Collections.synchronizedMap(new HashMap<String, Student>());
 
@@ -21,84 +26,54 @@ public class StudentResource {
      * @return
      */
     @GET
-    @Path("/getAll")
-    public List<Student> getAll(){
+    @Path("/getAllByJson")
+    public Response getAllJson(){
+        List<Student> lists = new ArrayList<Student>();
+        lists.add(new Student("1","mayun",23));
+        lists.add(new Student("2","mahuateng",24));
+        lists.add(new Student("3","zhouhongyi",25));
+        JSONObject json = new JSONObject();
+        return Response.status(Response.Status.OK).entity( json.toJSONString(lists)).build();
+    }
+    @GET
+    @Path("/getAllBad")
+    public Response getAllBad(String userId){
+
+        try {
+            if(userId == null){
+                //请求参数有误，响应400 错误请求
+                return Response.status(Response.Status.BAD_REQUEST).build();
+            }
+            List<Student> lists = new ArrayList<Student>(map.values());
+        }catch (Exception e){
+            //当服务器抛出异常时会响应500
+            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
+        }
+        //正常响应200
+        return Response.status(Response.Status.OK).build();
+    }
+    @GET
+    @Path("/getAll1")
+    public Response getAll(){
         List<Student> lists = new ArrayList<Student>(map.values());
-        return lists;
+
+        return Response.status(Response.Status.OK).build();
     }
 
     /**
-     * 根据id获取学生信息
-     * @param id
+     * 跳转请求方式变为GET
      * @return
      */
     @GET
-    @Path("get/{id}")
-    public Student getById(@PathParam("id") String id){
-        Student student = map.get(id);
-        return student;
+    @Path("/jump")
+    public Response redict(){
+        String url = "http://www.baidu.com";
+        return   Response.seeOther(URI.create(url)).build();
     }
-
-    /**
-     * 添加学生信息 通过json
-     * @return
-     */
     @POST
-    @Path("/addByJson")
-    public String addByJson(Student student){
-        map.put(student.getId(),student);
-        return "success";
-    }
-    /**
-     * 添加学生信息 通过javabean
-     * @return
-     */
-    @POST
-    @Path("/addByBean")
-    public String addByBean(@BeanParam  Student student){
-        map.put(student.getId(),student);
-        return "success";
-    }
-
-    /**
-     * 使用Context获取数据
-     * @param ui
-     * @return
-     */
-    @GET
-    public String get(@Context UriInfo ui) {
-        MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
-        MultivaluedMap<String, String> pathParams = ui.getPathParameters();
-        return "success";
-    }
-    /**
-     * 通过form添加学生信息
-     * @param id
-     * @param name
-     * @param age
-     * @return
-     */
-    @POST
-    @Path("/add")
-    public String add(@FormParam("id") String id,
-                      @FormParam("name") String name,
-                      @FormParam("age") Integer age){
-        Student student = new Student();
-        student.setId(id);
-        student.setName(name);
-        student.setAge(age);
-        map.put(id,student);
-        return "success";
-    }
-    /**
-     * 根据id删除学生信息
-     * @param id
-     * @return
-     */
-    @DELETE
-    @Path("/delete/{id}")
-    public String deleteById(@PathParam("id") String id){
-        map.remove(id);
-        return "success";
+    @Path("/jump2")
+    public Response jump(){
+        String url = "http://www.baidu.com";
+        return Response.temporaryRedirect(URI.create(url)).build();
     }
 }

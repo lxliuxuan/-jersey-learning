@@ -6,11 +6,11 @@ import javax.ws.rs.FormParam;
  * Created by lxliuxuan on 2016/11/14.
  */
 public class Student {
-    @FormParam("id")
+
     private  String id;
-    @FormParam("name")
+
     private String name;
-    @FormParam("age")
+
     private Integer age;
 
     public String getId() {
@@ -34,6 +34,12 @@ public class Student {
     }
 
     public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public Student(String id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
         this.age = age;
     }
 }
