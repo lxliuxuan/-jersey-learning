@@ -1,8 +1,8 @@
-/chapter1-1/.idea
+*/.idea
 /chapter1-1/target
-/chapter1-1/*.iml
+*/*.iml
 /chapter1-2/.idea
-/chapter1-2/target
+*/target
 /chapter1-3/.idea
 /chapter1-3/target
 
@@ -12,3 +12,4 @@
 /chapter3-4/target
 /chapter3-4/*.iml
 /chapter3-3/target
+/chapter4-1/target
