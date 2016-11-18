@@ -25,15 +25,18 @@
  - [chapter2-3 Jersey Response响应请求][6]
 
 ###WEB开发
-
- - [chapter3-1 文件上传与下载][7]
- - [chapter3-2 页面重定向与转发][7]
+ - [chapter3-1 页面重定向与转发][7]
+ - [chapter3-2 文件上传与下载][7]
  - [chapter3-3 过滤器使用][8]
  - [chapter3-4 统一异常处理][7]
  
  
 ###数据访问
-
+ - [chapter4-1 使用JdbcTemplate][71]
+ - [chapter4-2 使用Hibernate框架][71]
+ - [chapter4-3 使用NoSQL数据库（一）：Redis][71]
+ - [chapter4-4 使用NoSQL数据库（一）：MongoDB][71]
+ - [chapter3-4 使用MyBatis框架][71]
 ###日志管理
 
 ###缓存管理
