@@ -32,7 +32,7 @@
  
  
 ###数据访问
- - [chapter4-1 使用JdbcTemplate][71]
+ - [chapter4-1 使用JdbcTemplate][9]
  - [chapter4-2 使用Hibernate框架][71]
  - [chapter4-3 使用NoSQL数据库（一）：Redis][71]
  - [chapter4-4 使用NoSQL数据库（一）：MongoDB][71]
@@ -56,4 +56,5 @@
   [5]: http://blog.csdn.net/qq_28334711/article/details/53171975
   [6]: http://blog.csdn.net/qq_28334711/article/details/53183258
   [7]: http://blog.csdn.net/qq_28334711/article/details/53186674
-  [8]:http://blog.csdn.net/qq_28334711/article/details/53212719#t3
+  [8]: http://blog.csdn.net/qq_28334711/article/details/53212719#t3
+  [9]: http://blog.csdn.net/qq_28334711/article/details/53219145
