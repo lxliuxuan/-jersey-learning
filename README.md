@@ -35,7 +35,7 @@
  - [chapter4-1 使用JdbcTemplate][9]
  - [chapter4-2 使用Hibernate框架][71]
  - [chapter4-3 使用NoSQL数据库（一）：Redis][71]
- - [chapter4-4 使用NoSQL数据库（一）：MongoDB][71]
+ - [chapter4-4 使用NoSQL数据库（二）：MongoDB][10]
  - [chapter4-5 使用MyBatis框架][71]
 ###日志管理
 
@@ -58,3 +58,4 @@
   [7]: http://blog.csdn.net/qq_28334711/article/details/53186674
   [8]: http://blog.csdn.net/qq_28334711/article/details/53212719#t3
   [9]: http://blog.csdn.net/qq_28334711/article/details/53219145
+  [10]: http://blog.csdn.net/qq_28334711/article/details/53259956
