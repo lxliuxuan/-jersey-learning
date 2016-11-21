@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/data/mongo
+       http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+	<!-- spring连接mongodb数据库的配置
+		host:mongodb 主机
+		port:mongodb 端口号
+		credentials   格式：${userName}:${passWord}@${dbname}   userName mongodb的用户名 passWorld mongodb的密码 dbname mongodb的数据库
+		max-wait-time  最大等待时间
+		connect-timeout  连接超时时间
+		threads-allowed-to-block-for-connection-multiplier
+		socket-keep-alive
+		socket-timeout
+		connections-per-host
+	-->
+	<mongo:mongo-client host="172.30.248.251" port="27017" credentials="mall:malldev@md_mall_db" id="mongo">
+		<mongo:client-options write-concern="SAFE"
+							  max-wait-time="1500"
+							  connect-timeout="1000"
+							  threads-allowed-to-block-for-connection-multiplier="100"
+							  socket-keep-alive="true"
+							  socket-timeout="1500"
+							  connections-per-host="200" />
+
+	</mongo:mongo-client>
+
+	<mongo:db-factory  id="mongoDbFactory" dbname="md_mall_db" mongo-ref="mongo" />
+
+	<!--Srping mongo Template-->
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+	</bean>
+
+</beans>

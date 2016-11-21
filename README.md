@@ -36,7 +36,7 @@
  - [chapter4-2 使用Hibernate框架][71]
  - [chapter4-3 使用NoSQL数据库（一）：Redis][71]
  - [chapter4-4 使用NoSQL数据库（一）：MongoDB][71]
- - [chapter3-4 使用MyBatis框架][71]
+ - [chapter4-5 使用MyBatis框架][71]
 ###日志管理
 
 ###缓存管理
